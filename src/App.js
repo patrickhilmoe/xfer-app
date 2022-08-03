@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as XLSX from 'xlsx';
 import './App.css';
+import Home from './components/Home/Home';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -64,6 +65,9 @@ function App() {
           ))}
         </tbody>
       </table>
+    </div>
+    <div>
+        <Home />
     </div>
     </>
   );
