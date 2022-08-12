@@ -2,6 +2,7 @@ import { useState } from 'react';
 import * as XLSX from 'xlsx';
 import './App.css';
 import Home from './components/Home/Home';
+import ModalForm from './components/Modal';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -67,7 +68,28 @@ function App() {
       </table>
     </div>
     <div>
+    <table className="table">
+        <thead>
+          <tr>
+            <th scope="col">Request</th>
+            <th scope="col">Picture</th>
+          </tr>
+        </thead>
+        <tbody>
+            <th> item1 </th>
+            <th> <Home /> </th>
+        </tbody>
+        <tbody>
+            <th> item1 </th>
+            <th> <Home /> </th>
+        </tbody>
+      </table>
+    </div>
+    <div>
         <Home />
+    </div>
+    <div>
+      <ModalForm />
     </div>
     </>
   );
