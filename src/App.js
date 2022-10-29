@@ -3,6 +3,7 @@ import * as XLSX from 'xlsx';
 import './App.css';
 import Home from './components/Home/Home';
 import ModalForm from './components/Modal';
+import { WebcamCapture } from './components/Webcam/Webcam';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -77,20 +78,20 @@ function App() {
         </thead>
         <tbody>
             <th> item1 </th>
-            <th> <Home /> </th>
+            <th> <WebcamCapture /> </th>
         </tbody>
         <tbody>
-            <th> item1 </th>
-            <th> <Home /> </th>
+            <th> item2 </th>
+            <th> <WebcamCapture /> </th>
         </tbody>
       </table>
     </div>
     <div>
         <Home />
     </div>
-    <div>
+    {/* <div>
       <ModalForm />
-    </div>
+    </div> */}
     </>
   );
 }
