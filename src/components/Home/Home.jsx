@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // import './homeStyles.css'
 import { WebcamCapture} from '../Webcam/Webcam'
 
-
+//this file is for React Webcam picture taking
 const Home = () => {
 
     const [name, setName] = useState('')

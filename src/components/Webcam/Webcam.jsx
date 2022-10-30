@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Webcam from "react-webcam";
 
-
+//this file is for React Webcam picture taking
 const WebcamComponent = () => <Webcam />;
 
 const videoConstraints = {
