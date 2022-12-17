@@ -27,6 +27,10 @@ function ARitem () {
 			var light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
 			light.position.set(0.5, 1, 0.25);
 			scene.add(light);
+
+            // controller = renderer.xr.getController(0);
+            // controller.addEventListener("select", )
+            // scene.add(controller);
       
       // Look for "geometry" in the three.js documentation to find all the geometry types
       // https://threejs.org/docs/index.html
