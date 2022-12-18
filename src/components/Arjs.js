@@ -27,12 +27,7 @@ function ARitem () {
 			var light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
 			light.position.set(0.5, 1, 0.25);
 			scene.add(light);
-
-            // controller = renderer.xr.getController(0);
-            // controller.addEventListener("select", )
-            // scene.add(controller);
-      
-            
+     
       // Look for "geometry" in the three.js documentation to find all the geometry types
       // https://threejs.org/docs/index.html
 
@@ -47,7 +42,7 @@ function ARitem () {
       });
       
       mesh = new THREE.Mesh(geometry, material);
-      mesh.position.set(0.2, 0, -0.5);
+      mesh.position.set(0.2, 0, -2.5);
       scene.add(mesh);
       
       // Add a second torus shape to the scene
@@ -56,8 +51,44 @@ function ARitem () {
         color: new THREE.Color("rgb(253,253,150)") 
       });
       mesh2 = new THREE.Mesh(geometry2, material2);
-      mesh2.position.set(-0.2, 0, -1);
+      mesh2.position.set(-0.2, 0, -2);
       scene.add(mesh2);
+
+      // Add wall partition
+      const geometry3 = new THREE.BoxGeometry( 3, 3, .1 );
+      const material3 = new THREE.MeshPhongMaterial( {
+        color : new THREE.Color('rgb(122,150,167)'),
+        shininess : 44,
+        flatShading : true
+      } );
+      const mesh3 = new THREE.Mesh( geometry3, material3 );
+      mesh3.position.set(.05, 0, -4);
+      mesh3.rotateY(0);
+      scene.add( mesh3 );
+
+      // Add wall partition 2 right
+      const geometry4 = new THREE.BoxGeometry( 4, 3, .1 );
+      const material4 = new THREE.MeshPhongMaterial( {
+        color : new THREE.Color('rgb(122,150,167)'),
+        shininess : 44,
+        flatShading : true
+      } );
+      const mesh4 = new THREE.Mesh( geometry4, material4 );
+      mesh4.position.set(1.3, 0, -2);
+      mesh4.rotateY(1.5);
+      scene.add( mesh4 );
+
+      // Add wall partition 3 left
+      const geometry5 = new THREE.BoxGeometry( 4, 3, .1 );
+      const material5 = new THREE.MeshPhongMaterial( {
+        color : new THREE.Color('rgb(122,150,167)'),
+        shininess : 44,
+        flatShading : true
+      } );
+      const mesh5 = new THREE.Mesh( geometry5, material5 );
+      mesh5.position.set(-1.3, 0, -2);
+      mesh5.rotateY(1.4);
+      scene.add( mesh5 );
 
 			document.body.appendChild(ARButton.createButton(renderer));
 
