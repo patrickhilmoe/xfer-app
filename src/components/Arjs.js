@@ -32,6 +32,7 @@ function ARitem () {
             // controller.addEventListener("select", )
             // scene.add(controller);
       
+            
       // Look for "geometry" in the three.js documentation to find all the geometry types
       // https://threejs.org/docs/index.html
 
